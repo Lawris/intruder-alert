@@ -1,0 +1,269 @@
+alias: Intruder alert
+description: ''
+trigger:
+  - platform: event
+    event_type: alexa.alert
+condition: []
+action:
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.redlights
+  - service: media_player.play_media
+    target:
+      device_id:
+        - d99d9cb62761bbb342b793425bb34f78
+    data:
+      media_content_id: media-source://media_source/local/alarm.mp3
+      media_content_type: audio/x-wav
+    metadata:
+      title: alarm.mp3
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/youchosethewronghouse.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: youchosethewronghouse.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/threeseconds.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: threeseconds.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.media_stop
+    data: {}
+    target:
+      entity_id: media_player.roam
+  - service: switch.turn_on
+    data: {}
+    target:
+      entity_id: switch.warningscene
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/three.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: threeseconds.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/two.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: threeseconds.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/one.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: threeseconds.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+  - service: switch.turn_off
+    data: {}
+    target:
+      entity_id: switch.warningscene
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 1
+      milliseconds: 0
+  - service: media_player.turn_off
+    data: {}
+    target:
+      entity_id: media_player.android_tv
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/soyouhave.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: threeseconds.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 4
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - 0ee93f1fa9d9bd368a1cbbde37df917e
+    data:
+      media_content_id: media-source://media_source/local/doom.mp3
+      media_content_type: audio/x-wav
+    metadata:
+      title: doom.mp3
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - d99d9cb62761bbb342b793425bb34f78
+    data:
+      media_content_id: media-source://media_source/local/chemical.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: chemical.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - service: fan.set_percentage
+    data:
+      percentage: 100
+    target:
+      entity_id: fan.pure_cool_link
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - d99d9cb62761bbb342b793425bb34f78
+    data:
+      media_content_id: media-source://media_source/local/lockingup.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: lockingup.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+  - device_id: b1c8acb4b52853a35261316f19d5b471
+    domain: cover
+    entity_id: cover.volets_roulants
+    type: set_position
+    position: 0
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - service: media_player.play_media
+    target:
+      device_id:
+        - d99d9cb62761bbb342b793425bb34f78
+    data:
+      media_content_id: media-source://media_source/local/roombas.wav
+      media_content_type: audio/x-wav
+    metadata:
+      title: roombas.wav
+      thumbnail: null
+      media_class: music
+      children_media_class: null
+      navigateIds:
+        - {}
+        - media_content_type: app
+          media_content_id: media-source://media_source
+mode: single
